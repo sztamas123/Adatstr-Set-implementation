@@ -16,12 +16,15 @@ typedef struct {
     int max_item;
 }set;
 
-set createSet();
+set* createSet();
 void freeSet(set*);
 void insertItem(set*, int);
 int getSize(set);
 void erase(set*, int);
-
+void eraseAll(set*);
+int findElement(set, int);
+void printSet(set*);
+int isEmptySet(set);
 
 
 
