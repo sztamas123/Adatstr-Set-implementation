@@ -22,7 +22,7 @@ void insertItem(set*, int);
 int getSize(set);
 void erase(set*, int);
 void eraseAll(set*);
-int findElement(set, int);
+void findElement(set, int);
 void printSet(set*);
 int isEmptySet(set);
 

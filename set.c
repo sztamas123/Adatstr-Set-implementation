@@ -45,14 +45,23 @@ void eraseAll(set *s){
     }
 }
 
-int findElement(set s, int n){
-    int i = 0;
-    for (i = 0; i < (s.max_item - s.min_item + 1); ++i) {
-        if (s.items[i] == n){
-
-        }
+// valamiert rossz erteket ad vissza
+void findElement(set s, int n){
+    int first = s.min_item;
+    int last = s.max_item - 1;
+    int middle = (first + last) / 2;
+    while (first <= last){
+        if (s.items[middle] < n)
+            first = middle + 1;
+        else if (s.items[middle] == n){
+            printf("%d", middle + 1);
+            break;
+        } else
+            last = middle - 1;
+        middle = (first + last) / 2;
     }
-
+    if (first > last)
+        printf("Nincs ilyen elem.");
 }
 
 

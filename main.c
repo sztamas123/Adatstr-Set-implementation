@@ -8,6 +8,9 @@ int main() {
     }
 
     printSet(set1);
+    findElement(*set1, 2);
+    printf("\n");
+
 
 
 
@@ -36,7 +39,10 @@ int main() {
     insertItem(set1, 3);
     printSet(set1);
 
-    printf("%d", findElement(*set1, 3));
+
+
+    eraseAll(set1);
+    printSet(set1);
 
 
 
